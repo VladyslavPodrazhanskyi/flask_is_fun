@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>movies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/class_select.css') }}"
+</head>
+<body>
+<div class="test_color">
+    <p>Test color</p>
+</div>
+<h1>This movies collection belongs to {{ name }}</h1>
+<h3>Path to css file: {{ url_for('static', filename='css/styles.css') }}</h3>
+<table>
+    <tr>
+        <th>Movie</th>
+        <th>Length</th>
+        <th>Comment</th>
+    </tr>
+    {% for k, v in table.items() %}
+        <tr>
+            <td>{{ k }}</td>
+            <td>{{ v }}</td>
+            {% if v < 80 %}
+                <td style="color: green">Short</td>
+            {% elif v < 160 %}
+                <td style="color: #7f52ff">Medium</td>
+            {% else %}
+                <td style="color:red">Long</td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+
+
+{# The <table> tag defines an HTML table.
+{#An HTML table consists of one <table> element and one or more <tr>, <th>, and <td> elements.
+
+{#The <tr> element defines a table row,
+the <th> element defines a table header,
+and the <td> element defines a table cell.
+
+{#A more complex HTML table may also include
+<caption>, <col>, <colgroup>, <thead>, <tfoot>,
+and <tbody> elements. #}
