@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using Macro</title>
+</head>
+<body>
+<h4>Sample of rendering dict Movies to Table with Macros</h4>
+{% import 'macros.html' as my_macros %}
+{{ my_macros.render_dict(movies) }}
+</body>
+</html>
