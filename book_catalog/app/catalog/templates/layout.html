@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %}
+        <head>
+            <meta charset="UTF-8">
+            <title>books inc</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        </head>
+    {% endblock head %}
+    {% block body %}
+        <body>
+        <div class="wrapper">
+            {% block navbar %}
+                <nav class="navbar navbar-inverse">
+                    <div class="container">
+                        <a class="navbar navbar-text" href="{{ url_for('main.display_books') }}">
+                            <h3 class="title">The Books Shop around the Corner.</h3>
+                        </a>
+
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Register</a></li>
+                            <li><a href="">Sign in</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            {% endblock navbar %}
+            {% block content %}{% endblock content %}
+            {% block footer %}
+                <div class="container ftr">
+                    <hr>
+                    <p class="text-center small">The Shop Around The Corner &copy;  |  2020</p>
+                </div>
+            {% endblock footer %}
+        </div>
+        </body>
+    {% endblock %}
+</html>
+
