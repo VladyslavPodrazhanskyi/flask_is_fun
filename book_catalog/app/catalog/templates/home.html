@@ -16,6 +16,9 @@
     {% endfor %}
     </div>
     </div>
+    {%  if current_user.name  %}
+        <p>You're logged in as {{ current_user.name }}</p>
+    {% endif %}
 {% endblock content %}
 
 
