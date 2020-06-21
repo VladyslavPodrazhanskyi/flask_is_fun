@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container">
+        <h4 style="margin-left: 45px">Add a new book</h4>
+{#        <form method="POST">#}
+{#            {{ form.hidden_tag() }}<br>#}
+{#            {{ form.title.label }}<br>#}
+{#            {{ form.title() }}<br>#}
+{#            {{ form.author.label }}<br>#}
+{#            {{ form.author() }}<br>#}
+{#            {{ form.format.label }}<br>#}
+{#            {{ form.format() }}<br>#}
+{#            {{ form.num_pages.label }}<br>#}
+{#            {{ form.num_pages() }}<br>#}
+{#            {{ form.submit() }}#}
+{#        </form>#}
+        {{ form.hidden_tag() }}
+        {{ wtf.quick_form(form) }}
+    </div>
+{% endblock content %}

@@ -1,5 +1,6 @@
 from app import create_app, db
 from app.auth.models import User
+from flask import request
 
 if __name__ == '__main__':
     flask_app = create_app('dev')

@@ -25,7 +25,8 @@ def create_app(config_type): #dev, test or prod
     bootstrap.init_app(app)
 
     login_manager.init_app(app)
-    # login_manager.login_view = 'auth.routes.login'
+    login_manager.login_view = 'authentication.do_the_login'
+    login_manager.session_protection = 'strong'
 
     bcrypt.init_app(app)
 

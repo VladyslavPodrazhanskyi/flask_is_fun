@@ -4,19 +4,25 @@
     <div class="container form">
         <hr>
         <br>
-        <form method="post">
-            {{ form.hidden_tag() }}
-            <div class="form-group">
-                {{ form.email.label }}
-                {{ form.email() }}
-            </div>
-            <div class="form-group">
-                {{ form.password.label }}
-                {{ form.password() }}
-            </div>
-            <br>
-            <div class="form-group">
-                {{ form.submit(class='btn btn-primary') }}
-            </div>
-        </form>
+        {{ form.hidden_tag() }}  {# hidden tag is built in n quick form so it works without it. #}
+        {{ wtf.quick_form(form) }}
+{#        <form method="post">#}
+{#            {{ form.hidden_tag() }}#}
+{#            <div class="form-group">#}
+{#                {{ form.email.label }}#}
+{#                {{ form.email() }}#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                {{ form.password.label }}#}
+{#                {{ form.password() }}#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                {{ form.stay_loggedin.label }}#}
+{#                {{ form.stay_loggedin() }}#}
+{#            </div>#}
+{#            <br>#}
+{#            <div class="form-group">#}
+{#                {{ form.submit(class='btn btn-primary') }}#}
+{#            </div>#}
+{#        </form>#}
 {% endblock content %}

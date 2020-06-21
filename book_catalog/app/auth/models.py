@@ -35,4 +35,11 @@ class User(db.Model, UserMixin):
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(user_id)
+    return User.query.get(int(user_id))
+
+# user_loader(self, callback)
+# This sets the callback for reloading a user
+# from the session.The function you set
+# should take a user ID(a``unicode``) and return
+# a user object, or ``None`` if the user does not exist.
+
