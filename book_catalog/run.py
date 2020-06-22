@@ -3,7 +3,7 @@ from app.auth.models import User
 from flask import request
 
 if __name__ == '__main__':
-    flask_app = create_app('dev')
+    flask_app = create_app('prod')
     # Use  app_context() in a
     # with block, and everything that runs in the block
     # will have access to current_app.
